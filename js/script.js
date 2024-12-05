@@ -57,7 +57,7 @@ function typeMessage(text, callback) {
 function sendViolaMessage() {
     typeMessage(`Viola: ${messages[messageIndex]}`, () => {
         messageIndex = (messageIndex + 1) % messages.length; // Переход к следующему сообщению
-        typingTimeout = setTimeout(sendViolaMessage, Math.random() * 1000 + 2000); // Задержка 2-3 секунды
+        typingTimeout = setTimeout(sendViolaMessage, Math.random() * 1000); // Задержка
     });
 }
 
